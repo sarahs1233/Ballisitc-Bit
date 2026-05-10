@@ -317,4 +317,231 @@
             </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-brand-surface border-b border-slate-700 absolute w-full left-0 top-full p-4 flex flex-col gap-4 text-center shadow-2xl">
-            <a href
+            <a href="#about" class="block py-2 hover:text-brand-accent">אודות</a>
+            <a href="#materials" class="block py-2 hover:text-brand-accent">חומרי גלם</a>
+            <a href="#contact" class="block py-2 text-brand-accent font-bold">צור קשר</a>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-bg overflow-hidden">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-right z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-primary text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse-slow shadow-[0_0_8px_#e87525]"></span>
+                    המשימה שלנו
+                </div>
+                <h1 class="text-4xl lg:text-6xl font-black leading-tight mb-6 text-white">
+                    חומרי גלם <br>
+                    <span class="gradient-text">להדפסות תלת מימד</span>
+                </h1>
+                <p class="text-lg text-[#a8c7e0] mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                    בבליסטיק ביט, אנו מציעים פורטפוליו רחב של חומרים להדפסה תלת מימד שנבחרו בקפידה ונועדו ליישום הרעיונות שלך באופן מדויק ואיכותי.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#materials" class="bg-gradient-to-r from-brand-accent to-[#d1641b] hover:shadow-orange-500/50 hover:-translate-y-1 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg shadow-orange-500/30 text-center">
+                        לחומרי הגלם
+                    </a>
+                </div>
+            </div>
+            <div class="relative z-10 hidden lg:flex justify-center items-center">
+                <div class="hero-slider">
+                    <div class="slide-track" id="slideTrack">
+                        <div class="slide active"><img src="pic1.jpg" alt="1"></div>
+                        <div class="slide"><img src="pic2.jpg" alt="2"></div>
+                        <div class="slide"><img src="pic3.jpg" alt="3"></div>
+                        <div class="slide"><img src="pic4.png" alt="4"></div>
+                        <div class="slide"><img src="pic5.jpg" alt="5"></div>
+                        <div class="slide"><img src="pic6.jpeg" alt="6"></div>
+                        <div class="slide"><img src="pic7.jpg" alt="7"></div>
+                        <div class="slide"><img src="pic8.jpg" alt="8"></div>
+                    </div>
+                    <button class="slide-arrow prev" id="slidePrev">&#8250;</button>
+                    <button class="slide-arrow next" id="slideNext">&#8249;</button>
+                    <div class="slide-dots" id="slideDots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-brand-surface relative z-10 border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-white">אודות Ballistic Bit</h2>
+                <div class="h-1 w-20 bg-brand-accent mx-auto rounded-full"></div>
+            </div>
+            <div class="flex justify-center">
+                <div class="bg-brand-dark/50 p-8 rounded-2xl border border-brand-primary/20 max-w-3xl w-full text-center shadow-xl backdrop-blur-sm">
+                    <p class="text-[#a8c7e0] leading-relaxed mb-4 text-lg">
+                        <span class="text-white font-medium">מצוינות בשירות - מחויבים להצלחתכם.</span> אנו מספקים פתרונות ייצור תוספתי למגוון רחב של תעשיות בישראל.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="materials" class="py-20 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-white">חומרי גלם הנדסיים</h2>
+                <div class="h-1 w-20 bg-brand-accent mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="grid"></div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" onclick="closeLB(event)">
+        <div class="lb-inner" id="lbInner">
+            <div style="background: var(--brand-dark); display:flex; align-items:center; justify-content:center;">
+                <img id="lbImg" src="" alt="" class="lb-img">
+            </div>
+            <div class="lb-info">
+                <div class="lb-label" id="lbLabel"></div>
+                <div class="lb-title" id="lbTitle"></div>
+                <div class="lb-desc" id="lbDesc"></div>
+                <div class="lb-tags" id="lbTags"></div>
+            </div>
+            <div class="lb-close" onclick="closeLBBtn()">✕</div>
+            <div class="lb-nav lb-next" onclick="navigate(1)">&#8249;</div> 
+            <div class="lb-nav lb-prev" onclick="navigate(-1)">&#8250;</div>
+        </div>
+    </div>
+
+    <section id="contact" class="py-20 bg-brand-surface relative z-10 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-white">צור קשר</h2>
+                <div class="h-1 w-20 bg-brand-accent mx-auto rounded-full"></div>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6 bg-brand-dark/30 p-8 rounded-2xl border border-white/5 shadow-lg backdrop-blur-sm" name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-[#a8c7e0] mb-2">שם מלא</label>
+                            <input type="text" name="name" required class="w-full bg-brand-dark border border-brand-primary/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-all" placeholder="השם שלך">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-[#a8c7e0] mb-2">אימייל</label>
+                            <input type="email" name="email" required class="w-full bg-brand-dark border border-brand-primary/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-all" placeholder="your@email.com" dir="ltr">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-[#a8c7e0] mb-2">הודעה</label>
+                        <textarea name="message" rows="5" required class="w-full bg-brand-dark border border-brand-primary/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-all resize-none" placeholder="ספרו לנו על הפרויקט שלכם..."></textarea>
+                    </div>
+                    <div class="text-center pt-4">
+                        <button type="submit" class="bg-gradient-to-r from-brand-accent to-[#d1641b] text-white px-10 py-3 rounded-full font-bold transition-all shadow-lg shadow-orange-500/30 w-full md:w-auto">
+                             שלח הודעה
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#020d17] py-12 border-t border-white/5 text-[#a8c7e0] text-sm relative z-10">
+        <div class="container mx-auto px-6 text-center">
+            <img src="Ballistic logo HR positive.png" alt="Ballistic Bit" class="h-8 w-auto mx-auto mb-6">
+            <p>&copy; 2026 Ballistic Bit. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/972502556862" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 left-6 z-50 inline-flex items-center justify-center bg-[#25d366] text-white h-14 w-14 rounded-full shadow-lg transition-all hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const materials = [
+                { label: "פולימר בסיס", name: "PLA", full: "PLA – Polylactic Acid", desc: "חומר ידידותי לסביבה, קל להדפסה עם גימור מצוין.", tags: ["ביו-מתכלה"], img: "pla.png" },
+                { label: "פולימר תעשייתי", name: "ABS", full: "ABS – Acrylonitrile Butadiene", desc: "חזק ועמיד לחום, מתאים ליישומים תעשייתיים.", tags: ["עמידות חום"], img: "abs.png" },
+                { label: "פולימר מתקדם", name: "PETG", full: "PETG – Polyethylene Terephthalate", desc: "שילוב מנצח של חוזק וקלות הדפסה.", tags: ["עמידות מכנית"], img: "petg.png" },
+                { label: "אלסטומר", name: "TPU", full: "TPU – Thermoplastic Polyurethane", desc: "אלסטומר גמיש ועמיד במיוחד לשחיקה.", tags: ["גמישות"], img: "tpu.png" },
+                { label: "פולימר הנדסי", name: "Nylon", full: "Nylon – Polyamide (PA)", desc: "פולימר תעשייתי בעל עמידות קיצונית לשחיקה.", tags: ["חלקים נעים"], img: "nylon.png" },
+                { label: "שרף", name: "Resins", full: "שרפים – SLA / DLP", desc: "רזולוציה מקסימלית וגימור חלק במיוחד.", tags: ["דיוק"], img: "resin.png" },
+                { label: "פולימר הנדסי עליון", name: "PEEK", full: "PEEK – Polyether Ether Ketone", desc: "עמידות תרמית וכימית קיצונית.", tags: ["תעופה"], img: "peek.png" },
+                { label: "פולימר חסין אש", name: "ULTEM", full: "ULTEM / PEI – Polyetherimide", desc: "עמידות מעולה לאש ולחום גבוה.", tags: ["חסין אש"], img: "ultem.png" }
+            ];
+
+            const grid = document.getElementById('grid');
+            let current = 0;
+
+            materials.forEach((m, i) => {
+                const card = document.createElement('div');
+                card.className = 'mat-card';
+                card.innerHTML = `<div class="card-body"><div class="card-label">${m.label}</div><div class="card-title">${m.full}</div><div class="card-desc">${m.desc}</div></div>`;
+                card.addEventListener('click', () => openLB(i));
+                if(grid) grid.appendChild(card);
+            });
+
+            window.openLB = function(i) {
+                current = i;
+                const m = materials[i];
+                const lbImg = document.getElementById('lbImg');
+                lbImg.src = m.img;
+                lbImg.alt = m.full;
+                document.getElementById('lbLabel').textContent = m.label;
+                document.getElementById('lbTitle').textContent = m.full;
+                document.getElementById('lbDesc').textContent = m.desc;
+                document.getElementById('lbTags').innerHTML = m.tags.map(t => `<span class="lb-tag">${t}</span>`).join('');
+                document.getElementById('lightbox').classList.add('open');
+                document.body.style.overflow = 'hidden';
+            };
+
+            window.closeLBBtn = () => {
+                document.getElementById('lightbox').classList.remove('open');
+                document.body.style.overflow = '';
+            };
+
+            window.navigate = (dir) => {
+                current = (current + dir + materials.length) % materials.length;
+                window.openLB(current);
+            };
+
+            window.closeLB = (e) => {
+                if (e.target.id === 'lightbox') window.closeLBBtn();
+            };
+        });
+
+        (function() {
+            const slides = document.querySelectorAll('.slide');
+            const dotsContainer = document.getElementById('slideDots');
+            if (!slides.length || !dotsContainer) return;
+            
+            let cur = 0, timer;
+
+            slides.forEach((_, i) => {
+                const d = document.createElement('div');
+                d.className = 'slide-dot' + (i === 0 ? ' active' : '');
+                d.addEventListener('click', () => goTo(i));
+                dotsContainer.appendChild(d);
+            });
+
+            function goTo(n) {
+                slides[cur].classList.remove('active');
+                dotsContainer.children[cur].classList.remove('active');
+                cur = (n + slides.length) % slides.length;
+                slides[cur].classList.add('active');
+                dotsContainer.children[cur].classList.add('active');
+                resetTimer();
+            }
+
+            function resetTimer() {
+                clearInterval(timer);
+                timer = setInterval(() => goTo(cur + 1), 4000);
+            }
+
+            const prevBtn = document.getElementById('slidePrev');
+            const nextBtn = document.getElementById('slideNext');
+            if(prevBtn) prevBtn.addEventListener('click', () => goTo(cur - 1));
+            if(nextBtn) nextBtn.addEventListener('click', () => goTo(cur + 1));
+            
+            resetTimer();
+        })();
+    </script>
+</body>
+</html>
