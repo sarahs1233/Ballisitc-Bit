@@ -159,7 +159,6 @@
                 <img src="Ballistic logo HR positive.png" alt="Ballistic Bit" class="h-10 w-auto">
             </a>
             <div class="hidden md:flex items-center gap-8 font-medium">
-                <a href="#about" class="hover:text-brand-accent transition-colors">אודות</a>
                 <a href="#materials" class="hover:text-brand-accent transition-colors">חומרי גלם</a>
                 <a href="#contact" class="bg-gradient-to-r from-brand-accent to-[#d1641b] hover:from-[#d1641b] hover:to-brand-accent text-white px-6 py-2 rounded-full transition-all shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5">צור קשר</a>
             </div>
@@ -168,7 +167,6 @@
             </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-brand-surface border-b border-slate-700 absolute w-full left-0 top-full p-4 flex flex-col gap-4 text-center shadow-2xl">
-            <a href="#about" class="block py-2 hover:text-brand-accent">אודות</a>
             <a href="#materials" class="block py-2 hover:text-brand-accent">חומרי גלם</a>
             <a href="#contact" class="block py-2 text-brand-accent font-bold">צור קשר</a>
         </div>
@@ -206,32 +204,6 @@
                     <button class="slide-arrow prev" id="slidePrev">&#8250;</button>
                     <button class="slide-arrow next" id="slideNext">&#8249;</button>
                     <div class="slide-dots" id="slideDots"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-20 bg-brand-surface relative z-10 border-y border-white/5">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-white">אודות Ballistic Bit</h2>
-                <div class="h-1 w-20 bg-brand-accent mx-auto rounded-full"></div>
-                <p class="mt-4 text-[#a8c7e0] max-w-2xl mx-auto font-light">מובילים בתחום הייצור בהוספה עם מחויבות בלתי מתפשרת להצלחת לקוחותינו</p>
-            </div>
-            <div class="flex justify-center">
-                <div class="bg-brand-dark/50 p-8 rounded-2xl border border-brand-primary/20 hover:border-brand-primary/50 transition-all duration-300 max-w-3xl w-full text-center shadow-xl backdrop-blur-sm">
-                    <div class="flex flex-col items-center gap-3 mb-6">
-                        <div class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary text-2xl shadow-inner border border-brand-primary/20">
-                            <i class="fa-solid fa-eye"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white">החזון שלנו</h3>
-                    </div>
-                    <p class="text-[#a8c7e0] leading-relaxed mb-4 text-lg">
-                        <span class="text-white font-medium">מצוינות בשירות - מחויבים להצלחתכם.</span> אנו גאים להציע פתרונות ייצור תוספתי אשר נבחרו בקפידה למגוון רחב של תעשיות, כולל תעשיית הרכב, התעופה והחלל, הבריאות, החינוך, העיצוב והאדריכלות, התעשייה הביטחונית, והתעשייה האזרחית.
-                    </p>
-                    <p class="text-[#a8c7e0] leading-relaxed text-lg">
-                        בולטים באמינות וערך מוסף רב, החזון שלנו הוא להיות ספק מוביל בתעשיית הייצור בהוספה המספק פתרונות יוצאי דופן לחדשנות וטכנולוגיה בישראל.
-                    </p>
                 </div>
             </div>
         </div>
@@ -332,13 +304,13 @@
 
             /* ── Material cards ── */
             var materials = [
-                { label: "פולימר בסיס",          full: "PLA – Polylactic Acid",              desc: "חומר ידידותי לסביבה, קל להדפסה עם גימור מצוין. אידיאלי לאבות-טיפוס ומוצרי צריכה.",                                   tags: ["ביו-מתכלה", "קל להדפסה", "גימור חלק"] },
+                { label: "פולימר בסיס",          full: "PLA – Polylactic Acid",             desc: "חומר ידידותי לסביבה, קל להדפסה עם גימור מצוין. אידיאלי לאבות-טיפוס ומוצרי צריכה.",                                    tags: ["ביו-מתכלה", "קל להדפסה", "גימור חלק"] },
                 { label: "פולימר תעשייתי",        full: "ABS – Acrylonitrile Butadiene",      desc: "חזק ועמיד לחום, מתאים ליישומים תעשייתיים וחלקי פלסטיק עמידים לאורך זמן.",                                         tags: ["עמידות חום", "חזק במיוחד", "תעשייתי"] },
-                { label: "פולימר מתקדם",          full: "PETG – Polyethylene Terephthalate",  desc: "שילוב מנצח של חוזק וקלות הדפסה. מציע עמידות גבוהה, גמישות מבנית וגימור מבריק.",                                  tags: ["עמידות מכנית", "מבריק", "קל להדפסה"] },
-                { label: "אלסטומר",               full: "TPU – Thermoplastic Polyurethane",   desc: "אלסטומר גמיש ועמיד במיוחד לשחיקה ולשמנים. אידיאלי לאטמים, בולמי זעזועים ורכיבים גמישים.",                       tags: ["גמישות מקסימלית", "עמיד שחיקה", "אטמים"] },
-                { label: "פולימר הנדסי",          full: "Nylon – Polyamide (PA)",             desc: "פולימר תעשייתי בעל עמידות קיצונית לשחיקה. מושלם לגלגלי שיניים, צירים וחלקים נעים.",                              tags: ["חלקים נעים", "עמידות שחיקה", "מכניקה"] },
-                { label: "שרף פוטופולימרי",       full: "שרפים – SLA / DLP",                 desc: "רזולוציה מקסימלית וגימור חלק במיוחד. מיועד להדפסות מדויקות כמו רפואת שיניים ותכשיטנות.",                         tags: ["רזולוציה גבוהה", "SLA/DLP", "דיוק אבסולוטי"] },
-                { label: "פולימר הנדסי עליון",    full: "PEEK – Polyether Ether Ketone",     desc: "עמידות תרמית וכימית קיצונית (עד 250°C). פולימר על המיועד לתעופה, רפואה ותעשייה כבדה.",                            tags: ["עד 250°C", "תעופה וחלל", "שתלים"] },
+                { label: "פולימר מתקדם",          full: "PETG – Polyethylene Terephthalate",  desc: "שילוב מנצח של חוזק וקלות הדפסה. מציע עמידות גבוהה, גמישות מבנית וגימור מבריק.",                                   tags: ["עמידות מכנית", "מבריק", "קל להדפסה"] },
+                { label: "אלסטומר",               full: "TPU – Thermoplastic Polyurethane",   desc: "אלסטומר גמיש ועמיד במיוחד לשחיקה ולשמנים. אידיאלי לאטמים, בולמי זעזועים ורכיבים גמישים.",                        tags: ["גמישות מקסימלית", "עמיד שחיקה", "אטמים"] },
+                { label: "פולימר הנדסי",          full: "Nylon – Polyamide (PA)",             desc: "פולימר תעשייתי בעל עמידות קיצונית לשחיקה. מושלם לגלגלי שיניים, צירים וחלקים נעים.",                               tags: ["חלקים נעים", "עמידות שחיקה", "מכניקה"] },
+                { label: "שרף פוטופולימרי",       full: "שרפים – SLA / DLP",                 desc: "רזולוציה מקסימלית וגימור חלק במיוחד. מיועד להדפסות מדויקות כמו רפואת שיניים ותכשיטנות.",                          tags: ["רזולוציה גבוהה", "SLA/DLP", "דיוק אבסולוטי"] },
+                { label: "פולימר הנדסי עליון",    full: "PEEK – Polyether Ether Ketone",     desc: "עמידות תרמית וכימית קיצונית (עד 250°C). פולימר על המיועד לתעופה, רפואה ותעשייה כבדה.",                             tags: ["עד 250°C", "תעופה וחלל", "שתלים"] },
                 { label: "פולימר חסין אש",        full: "ULTEM / PEI – Polyetherimide",      desc: "עמידות מעולה לאש ולחום גבוה. חזק ונוקשה, מהווה חלופה משתלמת ליישומים מתקדמים.",                                  tags: ["חסין אש", "תא מחומם", "חוזק מבני"] }
             ];
 
